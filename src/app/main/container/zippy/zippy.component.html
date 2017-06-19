@@ -1,0 +1,11 @@
+<dl-accordion>
+  <dl-accordion-group heading="First Group Header " isGroupOpen="true">
+    Introduction
+  </dl-accordion-group>
+  <dl-accordion-group [heading]="group.heading" *ngFor="let group of groups">
+    {{group.content}}
+  </dl-accordion-group>
+  <dl-accordion-group heading="Last Group Header" [isOpen]="isGroupOpen">
+    Additional Information
+  </dl-accordion-group>
+</dl-accordion>

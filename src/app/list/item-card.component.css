@@ -1,0 +1,41 @@
+:host {
+  padding: 5px;
+  margin: 5px;
+}
+
+img {
+  border-radius: 25px;
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.twitter-hash {
+  color: darkgrey;
+}
+
+.heart {
+  color: grey;
+}
+
+.active {
+  color: deeppink;
+}
+
+.likes {
+  line-height: 24px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.likes:focus {
+  outline: none;
+}
+

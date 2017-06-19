@@ -1,0 +1,18 @@
+<md-card class="example-card">
+  <md-card-content>
+    <div class="container">
+      <img md-card-md-image [src]="item?.picUrl">
+      <div class="content">
+        <md-card-title>{{item?.title}} <span class="twitter-hash">@{{item?.twitterHash}}</span></md-card-title>
+        <md-card-subtitle>{{item?.subTitle}}</md-card-subtitle>
+        <div>
+          <button md-fab (click)="addLike()" class="likes">
+            <i class="material-icons heart" [class.active]="isActive">favorite</i>
+            <span>{{item?.Likes}}</span>
+          </button>
+        </div>
+       
+      </div>
+    </div>
+  </md-card-content>
+</md-card>

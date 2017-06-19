@@ -1,0 +1,14 @@
+<br>
+<md-chip-list>
+  <md-chip  [class.active]="viewMode == 'map'" >
+    <a (click)="viewMode='map'">Map</a>
+  </md-chip>
+  <md-chip [class.background-primary-color]= "'white-text'" [class.active]="viewMode == 'list'">
+    <a (click)="viewMode='list'">List</a>
+  </md-chip>
+</md-chip-list>
+<div [ngSwitch]="viewMode">
+  <ng-template [ngSwitchCase]="'map'" ngSwitchDefault>Map view Content</ng-template>
+  <ng-template [ngSwitchCase]="'list'">ListView Content</ng-template>
+</div>
+<dl-item-card *ngFor="let item of gridItems" [item]="item"></dl-item-card>

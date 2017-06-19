@@ -1,0 +1,15 @@
+<div class="panel panel-default" [ngClass]="{'panel-open': isOpen}">
+  <div class="panel-heading" (click)="toggleOpen($event)">
+    <h4 class="panel-title">
+      <a href tabindex="0">
+        <md-icon>{{icon_content}}</md-icon>
+        <span>{{heading}}</span>
+      </a>
+    </h4>
+  </div>
+  <div class="panel-collapse" [hidden]="!isOpen" [@focusPanel]="state">
+    <div class="panel-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

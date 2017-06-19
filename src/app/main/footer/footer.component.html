@@ -1,0 +1,24 @@
+<md-toolbar color="primary" style="width: inherit">
+  <div style="display: flex; justify-content: flex-start;">
+    <i class="material-icons">pan_tool</i><span>{{Title | uppercase}}</span>
+  </div>
+  <div style="display: flex; justify-content: flex-end;width: 100%; ">
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>
+        <i class="material-icons">dialpad</i>
+        <span>Redial</span>
+      </button>
+      <button md-menu-item disabled>
+        <i class="material-icons">voicemail</i>
+        <span>Check voicemail</span>
+      </button>
+      <button md-menu-item>
+        <i class="material-icons">notifications_off</i>
+        <span>Disable alerts</span>
+      </button>
+    </md-menu>
+  </div>
+</md-toolbar>
